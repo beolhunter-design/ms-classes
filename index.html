@@ -2,70 +2,78 @@
 <html>
 <head>
 <title>MS Classes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
 }
 
 header {
-    background: #1e293b;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
     color: white;
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-nav {
-    background: #0f172a;
-    padding: 10px;
-    text-align: center;
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
+header p {
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #2563eb;
     font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
 }
 
-section {
-    padding: 40px;
+.section {
+    padding: 40px 20px;
     text-align: center;
 }
 
 .card {
     background: white;
-    padding: 20px;
+    padding: 25px;
     margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 input {
+    width: 90%;
     padding: 10px;
-    margin: 10px;
-    width: 80%;
-    border-radius: 5px;
-    border: 1px solid gray;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
     padding: 10px 20px;
-    background: #22c55e;
+    background: #2563eb;
     border: none;
     color: white;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 footer {
-    background: #1e293b;
+    background: #111827;
     color: white;
-    padding: 15px;
     text-align: center;
+    padding: 20px;
+    margin-top: 30px;
 }
 </style>
 </head>
@@ -74,32 +82,28 @@ footer {
 
 <header>
     <h1>MS Classes</h1>
-    <p>Learn Today, Lead Tomorrow 🚀</p>
+    <p>Quality Education for 9th to 12th Science Students</p>
+    <a href="#register" class="btn">Join Now</a>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Courses</a>
-    <a href="#">Contact</a>
-</nav>
-
-<section>
+<div class="section">
+    <h2>Our Subjects</h2>
     <div class="card">
-        <h2>Our Courses</h2>
-        <p>9th, 10th, 11th & 12th Science</p>
-        <p>Mathematics | Physics | Chemistry</p>
+        Mathematics | Physics | Chemistry
     </div>
+</div>
 
+<div class="section" id="register">
+    <h2>Student Registration</h2>
     <div class="card">
-        <h2>Student Registration</h2>
         <form onsubmit="register(event)">
-            <input type="text" placeholder="Enter Your Name" required><br>
-            <input type="number" placeholder="Enter Your Class" required><br>
-            <input type="tel" placeholder="Enter Mobile Number" required><br>
-            <button type="submit">Join Now</button>
+            <input type="text" placeholder="Your Name" required><br>
+            <input type="number" placeholder="Your Class" required><br>
+            <input type="tel" placeholder="Mobile Number" required><br>
+            <button type="submit">Register</button>
         </form>
     </div>
-</section>
+</div>
 
 <footer>
     © 2026 MS Classes | All Rights Reserved
@@ -108,7 +112,7 @@ footer {
 <script>
 function register(event) {
     event.preventDefault();
-    alert("Registration Successful! We will contact you soon.");
+    alert("Thank you for registering! We will contact you soon.");
 }
 </script>
 
